@@ -1,13 +1,15 @@
+import os
 from pathlib import Path
 
 README = Path("README.md")
-WORDS = Path("words.txt")
 
 START = "<!-- POEM_START -->"
 END = "<!-- POEM_END -->"
 
+poem = os.environ["POEM"]
+all_words = poem.split()
+
 readme = README.read_text()
-all_words = WORDS.read_text().splitlines()
 
 start = readme.index(START) + len(START)
 end = readme.index(END)
@@ -30,4 +32,7 @@ updated = (
 
 README.write_text(updated)
 
-print(f"Added: {current_words[-1]}")
+if len(current_words) > 0:
+    print(f"Added: {current_words[-1]}")
+else:
+    print("Poem complete!")
