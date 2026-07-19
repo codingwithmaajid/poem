@@ -24,6 +24,8 @@ jobs:
           python-version: "3.12"
 
       - name: Run Python Script
+        env:
+          POEM: ${{ secrets.POEM }}
         run: python append_word.py
 
       - name: Configure Git
@@ -33,8 +35,8 @@ jobs:
 
       - name: Commit Changes
         run: |
-          git add poem.txt
-          git diff --cached --quiet || git commit -m "Add today's word"
+          git add README.md
+          git diff --cached --quiet || git commit -m "A new word arrives"
 
       - name: Push Changes
         run: git push
