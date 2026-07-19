@@ -1,0 +1,40 @@
+name: Daily Poem
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "0 0 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  poem:
+    name: Add Today's Word
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run Python Script
+        run: python append_word.py
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+      - name: Commit Changes
+        run: |
+          git add poem.txt
+          git diff --cached --quiet || git commit -m "Add today's word"
+
+      - name: Push Changes
+        run: git push
