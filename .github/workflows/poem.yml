@@ -30,8 +30,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config user.name "ghost"
-          git config user.email "github-actions@github.com"
+          git config user.name "codingwithmaajid"
+          git config user.email "abdulmaajid7002@gmail.com"
 
       - name: Commit Changes
         run: |
