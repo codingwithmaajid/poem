@@ -6,7 +6,7 @@
 
 <!-- POEM_START -->
 
-The
+The moon
 
 <!-- POEM_END -->
 
