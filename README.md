@@ -6,7 +6,7 @@
 
 <!-- POEM_START -->
 
-The moon
+The moon whispers
 
 <!-- POEM_END -->
 
