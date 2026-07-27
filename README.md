@@ -6,7 +6,7 @@
 
 <!-- POEM_START -->
 
-The moon whispers through forgotten forests where
+The moon whispers through forgotten forests where dreams
 
 <!-- POEM_END -->
 
