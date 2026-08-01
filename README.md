@@ -6,7 +6,7 @@
 
 <!-- POEM_START -->
 
-The moon whispers through forgotten forests where dreams become stars that never
+The moon whispers through forgotten forests where dreams become stars that never forget
 
 <!-- POEM_END -->
 
